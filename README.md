@@ -14,9 +14,31 @@ catkin build
 source ~/.bashrc
 ```
 
-running: 
+running with hound docker:
+
+Start roscore:
+```
+roscore
+``` 
+
+Start depth to point-cloud converter:
+```
+roslaunch elevation_mapping_cupy depth_to_pcl.launch
+```
+
+Start G-VOM node:
 ```
 roslaunch gvom gvom_node.launch
+```
+
+
+Start rosbag that can be found [here](https://drive.google.com/drive/folders/199DewAwkbG-MUR6DnEZhLSMJ9OsQyE7J?usp=sharing)
+```
+rosbag play hound_25.bag
+```
+
+```
+rviz -d /root/catkin_ws/src/G-VOM/test_gvom.rviz
 ```
 
 ## A GPU Accelerated Voxel Off-Road Mapping System 
