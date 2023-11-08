@@ -1,4 +1,24 @@
 # G-VOM
+
+## Install steps for HOUND:
+
+```
+cd ~/catkin_ws/src/
+git clone https://github.com/sidtalia/G-VOM.git
+git clone https://github.com/eric-wieser/ros_numpy
+```
+then, from inside the hound-docker:
+```
+cd ~/catkin_ws/src/
+catkin build
+source ~/.bashrc
+```
+
+running: 
+```
+roslaunch gvom gvom_node.launch
+```
+
 ## A GPU Accelerated Voxel Off-Road Mapping System 
 
 A Python 3 ROS package for lidar based off-road mapping.
